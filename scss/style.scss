@@ -1,0 +1,63 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+}
+
+body {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+// MAIN VARIBLE
+:root {
+  --max-container: 1140px;
+}
+
+// Overlay
+.ThemeOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.ThemeOverlay--disable {
+  display: none;
+  z-index: -10;
+}
+
+// Container
+.Container {
+  max-width: var(--max-container);
+  margin: 0 auto;
+}
+
+// Header
+
+.header {
+  &-nav {
+    display: flex;
+    flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+  }
+}
+
+// /Header
