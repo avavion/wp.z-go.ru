@@ -35,29 +35,27 @@ a {
   --btn--primary: #2aa7cb;
 }
 
+.arrow--down {
+  position: relative;
+  cursor: pointer;
+  top: 19%;
+  left: 0;
+  font-size: 50px;
+  color: var(--btn--primary);
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    top: 20%;
+  }
+}
+
 .btn {
   &--primary {
     background-color: var(--btn--primary);
   }
-}
-.Container {
-  margin: 0 auto;
-  max-width: var(--container);
-}
-
-.header {
-  .arrow--down {
-    position: relative;
-    top: 25%;
-    left: 50%;
-    font-size: 64px;
-    color: var(--btn--primary);
-    transform: translate(-50%, -50%);
-  }
-  .btn__header {
+  &__header {
     border-radius: 38px;
     padding: 20px 45px;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
     &:hover {
       color: #fff;
       background-color: lighten(#2aa7cb, 5);
@@ -67,7 +65,31 @@ a {
       background-color: darken(#2aa7cb, 10);
     }
   }
+}
+.Container {
+  margin: 0 auto;
+  max-width: var(--container);
+}
+
+.Section_Title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  &__Title {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 3rem;
+  }
+  &__Text {
+    font-weight: 300;
+  }
+}
+
+.header {
   &-main {
+    text-align: center;
     &__overlay {
       width: 100%;
       height: 100%;
@@ -78,6 +100,7 @@ a {
       background-image: url("../assets/img/header__background.png");
       background-size: cover;
       background-repeat: no-repeat;
+      background-position: center center;
     }
     &__title {
       font-size: 45px;
@@ -114,5 +137,11 @@ a {
       align-items: center;
       height: 120px;
     }
+  }
+}
+
+.About {
+  &_Title {
+    margin: 80px 0;
   }
 }
